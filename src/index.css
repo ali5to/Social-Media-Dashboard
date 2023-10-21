@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Inter", sans-serif;
+    @apply text-very-dark-blue;
+  }
+}
+.c-container {
+  @apply w-[90%] max-w-[80rem] mx-auto;
+}
+
+.recharts-cartesian-axis-tick-line {
+  display: none !important;
+}
+
+:root {
+  --top-bg: hsl(225, 100%, 98%);
+  --card-bg: hsl(227, 47%, 96%);
+  --card-bg-hover: hsla(232, 33%, 91%, 1);
+  --main-bg: hsl(0, 0%, 100%);
+  --main-text: hsl(230, 17%, 14%);
+  --secondary-text: hsl(228, 12%, 44%);
+  --toggle: hsl(230, 22%, 74%);
+}
+
+html.dark {
+  --top-bg: hsl(232, 19%, 15%);
+  --card-bg: hsl(228, 28%, 20%);
+  --card-bg-hover: hsla(228, 26%, 27%, 1);
+  --main-bg: hsl(230, 17%, 14%);
+  --main-text: hsl(0, 0%, 100%);
+  --secondary-text: hsl(228, 34%, 66%);
+  --toggle: linear-gradient(hsl(210, 78%, 56%) to hsl(146, 68%, 55%));
+}
+
+body {
+  background: var(--main-bg);
+}
+
+.top-bg {
+  background-color: var(--top-bg);
+}
+
+.main-bg {
+  background-color: var(--main-bg);
+}
+
+.card-bg {
+  background-color: var(--card-bg);
+}
+
+.card-bg:hover {
+  background-color: var(--card-bg-hover);
+}
+
+.main-text {
+  color: var(--main-text);
+}
+
+.secondary-text {
+  color: var(--secondary-text);
+}
+
+.bg-toggle {
+  background: var(--toggle);
+}
+
+.color-text-toggle {
+  color: var(--toggle);
+}
+
+.dark .color-text-toggle {
+  color: var(--secondary-text);
+}
+
+.subtitle {
+  color: var(--secondary-text);
+}
+
+.dark .subtitle {
+  color: var(--main-text);
+}
+
+.modal-secondary-text {
+  color: var(--secondary-text);
+}
+
+.dark .modal-secondary-text {
+  color: var(--main-text);
+}
+
+.swiper-wrapper {
+  padding-bottom: 50px;
+}
+
+.swiper-pagination-bullet {
+  background: var(--secondary-text);
+}
+.swiper-pagination-bullet-active {
+  background: var(--main-text);
+}
